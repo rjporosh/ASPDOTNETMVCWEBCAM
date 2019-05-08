@@ -41,7 +41,7 @@ namespace WebcamMVC.Controllers
             return View();
         }
 
-        
+
 
         public JsonResult Rebind()
         {

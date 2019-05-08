@@ -1,0 +1,793 @@
+﻿@model WebcamMVC.Models.ViewModel.BioMetricVM
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>NSA Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>NSA Form</h2>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Course and Eligibility</a></li>
+            <li><a data-toggle="tab" href="#menu1">Student Details</a></li>
+            <li><a data-toggle="tab" href="#menu2">Academic Details</a></li>
+            <li><a data-toggle="tab" href="#menu3">Contact Details</a></li>
+            <li><a data-toggle="tab" href="#menu4">Bio-Metric Registration</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+
+                <form class="form-inline" style="padding: 30px 0;">
+                    <div class="form-group" style="margin-bottom: 15px">
+                        <label for="email">APPLICATION FORM No:</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px">
+                        <label for="pwd">REGISTRATION No:</label>
+                        <input type="password" class="form-control" id="pwd" name="pwd">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px">
+                        <label for="pwd">ADMISSION CARD No:</label>
+                        <input type="password" class="form-control" id="pwd" name="pwd">
+                    </div>
+
+
+                </form>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading" style="text-align:center;font-size: 22px">EAMCET/ECET DETAILS</div>
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="name">Hall Ticket No</label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+                                        <label class="col-sm-2 control-label" for="name">Marks</label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Rank General</label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+                                        <label class="col-sm-2 control-label">Minority Rank</label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Maths</label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+                                        <label class="col-sm-2 control-label">Physics</label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Chemistry</label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading" style="text-align:center;font-size: 22px">MENTION COURSE IN THE ORDER OF PRIORITY</div>
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+
+                                    <div class="form-group">
+
+                                        <label class="col-sm-1 col-xs-1 control-label" for="sel1">1.</label>
+                                        <div class="col-sm-11 col-xs-11">
+                                            <select class="form-control" id="sel1">
+                                                <option>------Select------</option>
+                                                <option>Civil Engineering(Civil)</option>
+                                                <option>Computer Science Engineering(CSE)</option>
+                                                <option>Electrical and Electronics(EEE)</option>
+                                                <option>Electronics and Communication Engineering(ECE)</option>
+                                                <option>Mechanical Engineering(Mech)</option>
+                                                <option>Information Technology(IT)</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label class="col-sm-1 col-xs-1 control-label" for="sel1">2.</label>
+                                        <div class="col-sm-11 col-xs-11">
+                                            <select class="form-control" id="sel1">
+                                                <option>------Select------</option>
+                                                <option>Civil Engineering(Civil)</option>
+                                                <option>Computer Science Engineering(CSE)</option>
+                                                <option>Electrical and Electronics(EEE)</option>
+                                                <option>Electronics and Communication Engineering(ECE)</option>
+                                                <option>Mechanical Engineering(Mech)</option>
+                                                <option>Information Technology(IT)</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label class="col-sm-1 col-xs-1 control-label" for="sel1">3.</label>
+                                        <div class="col-sm-11 col-xs-11">
+                                            <select class="form-control" id="sel1">
+                                                <option>------Select------</option>
+                                                <option>Civil Engineering(Civil)</option>
+                                                <option>Computer Science Engineering(CSE)</option>
+                                                <option>Electrical and Electronics(EEE)</option>
+                                                <option>Electronics and Communication Engineering(ECE)</option>
+                                                <option>Mechanical Engineering(Mech)</option>
+                                                <option>Information Technology(IT)</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label class="col-sm-1 col-xs-1 control-label" for="sel1">4.</label>
+                                        <div class="col-sm-11 col-xs-11">
+                                            <select class="form-control" id="sel1">
+                                                <option>------Select------</option>
+                                                <option>Civil Engineering(Civil)</option>
+                                                <option>Computer Science Engineering(CSE)</option>
+                                                <option>Electrical and Electronics(EEE)</option>
+                                                <option>Electronics and Communication Engineering(ECE)</option>
+                                                <option>Mechanical Engineering(Mech)</option>
+                                                <option>Information Technology(IT)</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label class="col-sm-1 col-xs-1 control-label" for="sel1">5.</label>
+                                        <div class="col-sm-11 col-xs-11">
+                                            <select class="form-control" id="sel1">
+                                                <option>------Select------</option>
+                                                <option>Civil Engineering(Civil)</option>
+                                                <option>Computer Science Engineering(CSE)</option>
+                                                <option>Electrical and Electronics(EEE)</option>
+                                                <option>Electronics and Communication Engineering(ECE)</option>
+                                                <option>Mechanical Engineering(Mech)</option>
+                                                <option>Information Technology(IT)</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label class="col-sm-1 col-xs-1 control-label" for="sel1">6.</label>
+                                        <div class="col-sm-11 col-xs-11">
+                                            <select class="form-control" id="sel1">
+                                                <option>------Select------</option>
+                                                <option>Civil Engineering(Civil)</option>
+                                                <option>Computer Science Engineering(CSE)</option>
+                                                <option>Electrical and Electronics(EEE)</option>
+                                                <option>Electronics and Communication Engineering(ECE)</option>
+                                                <option>Mechanical Engineering(Mech)</option>
+                                                <option>Information Technology(IT)</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading" style="text-align:center;font-size: 22px">INTERMEDIATE OR EQUIVALENT</div>
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label" for="name">Aggregate Percentage</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label" for="name">Group(MPC)Percentage</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label" for="name">Polytechnic Percent</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="focusedInput" type="text">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div style="float: right;margin: 10px 0">
+                    <a class="btn btn-primary btnNext">Next</a>
+                </div>
+            </div><!-- first-tab -->
+            <div id="menu1" class="tab-pane fade">
+                <form class="form-horizontal">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="text-align:center;font-size: 22px">Student Details</div>
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email" style="margin-top: 40px">1.NAME OF THE CANDIDATE<br>(AS IN SSC/EQUIVALENT)<br><br>2.NAME OF THE FATHER:</label>
+                                <div class="col-sm-6" style="margin-top: 40px">
+                                    <input type="email" class="form-control" name="email">
+                                    <input type="email" class="form-control" name="email" style="margin-top: 20px">
+                                </div>
+
+                                <div class="col-sm-3" style="margin-top:  20px">
+                                    <div class="showPic">
+                                        <label class="label" for="input">Please upload a picture !</label>
+
+                                        <div class="input">
+                                            <input name="input" id="file" type="file">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">2.NAME OF THE FATHER:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control"  name="email">
+                                </div>
+
+                            </div> -->
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">3.NAME OF THE MOTHER:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">4.DATE OF BIRTH<br>(AS IN SSC/EQUIVALENT):</label>
+                                <div class="col-sm-4">
+                                    <input type="date" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-2">5.GENDER</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">6.MOTHER TONGUE:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">7.PLACE OF BIRTH:</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-3" for="email">COUNTRY/STATE:</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">8.ADDRESS FOR COMMUNICATION:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">PHONE No:</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-3" for="email">Email:</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">ADHAAR No:</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">9.IDENTIFICATION MARKS:</label>
+                                <div class="col-sm-4">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">10.RELIGION:</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-3" for="email">11.COMMUNITY:</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    12.CATEGORY
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="text-align:center;font-size: 22px">15.DETAILS OF FATHER/GUARDIAN</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    a.Name
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    b.Relationship
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    c.Educational Qualification
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    d.Name of Organization/work place
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    e.Designation
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-3">
+                                    f.Total Annual Income
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    g.Phone No
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-3">
+                                    h.Email
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="text-align:center;font-size: 22px">16.DETAILS OF MOTHER/GUARDIAN</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    a.Name
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    b.Relationship
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    c.Educational Qualification
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    d.Name of Organization/work place
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    e.Designation
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-3">
+                                    f.Total Annual Income
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    g.Phone No
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-3">
+                                    h.Email
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="text-align:center;font-size: 22px">FURNISH THE DETAILS OF ALL BROTHERS/SISTERS(own)</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    16.FURNISH THE DETAILS OF ALL BROTHERS/SISTERS(own):
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-3">
+                                    Qualification
+                                </label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <div style="float: right;margin: 7px 0">
+                    <a class="btn btn-primary btnPrevious">Previous</a>
+                    <a class="btn btn-primary btnNext">Next</a>
+                </div>
+            </div><!--second-tab-->
+            <div id="menu2" class="tab-pane fade">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="text-align:center;font-size: 22px">17.DETAILS OF ACADEMICS</div>
+                    <div class="panel-body">
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>School/College Attended Place</th>
+                                    <th>Year of Passing</th>
+                                    <th>Division Obtained</th>
+                                    <th>Marks Secured</th>
+                                    <th>Date of Joining</th>
+                                    <th>Date of Leaving</th>
+                                    <th>Duration of Study</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intermediate</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td>SSC or Equivalent</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                </tr>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                        <h4 style="margin: 30px 0">18.MARKS OBTAINED IN INTERMEDIATE(2 Years)</h4>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Marks Secured</th>
+                                    <th>MAX Marks</th>
+                                    <th>Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mathematics</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td>Physics</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td>Chemistry</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td>Second Language</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <form class="form-horizontal" style="padding: 20px 0">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">Year of Passing 10 Class:</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-2" for="email">Passed in 1<sup>st</sup> Attemp: <input type="checkbox"></label>
+                                <label class="control-label col-sm-2" for="email">Instant: <input type="checkbox"></label>
+                                <label class="control-label col-sm-2" for="email">Supplementary: <input type="checkbox"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">Year of Passing Intermediate:</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <label class="control-label col-sm-2" for="email">Passed in 1<sup>st</sup> Attemp: <input type="checkbox"></label>
+                                <label class="control-label col-sm-2" for="email">Instant: <input type="checkbox"></label>
+                                <label class="control-label col-sm-2" for="email">Supplementary: <input type="checkbox"></label>
+                            </div>
+                        </form>
+                        <div style="float: right;margin: 7px 0">
+                            <a class="btn btn-primary btnPrevious">Previous</a>
+                            <a class="btn btn-primary btnNext">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--third-tab-->
+            <div id="menu3" class="tab-pane fade">
+                <form class="form-horizontal">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="text-align:center;font-size: 22px">PERMANENT ADDRESS</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">PERMANENT ADDRESS:</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="text-align:center;font-size: 22px">MENTION NAME,ADDRESS AND TELEPHONE OF ATLEAST TWO REFEREES</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">1.NAME:</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <label class="control-label col-sm-3">PHONE:</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">ADDRESS:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">2.NAME:</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <label class="control-label col-sm-3">PHONE:</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">ADDRESS:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div style="float:right;margin: 20px 0">
+                    <a class="btn btn-primary btnPrevious">Previous</a>
+                    <a class="btn btn-primary btnNext">Next</a>
+                </div>
+            </div>
+            <!--fourth-tab-->
+            <div id="menu4" class="tab-pane fade">
+                <form class="form-horizontal" id="myCustomForm">
+
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="text-align:center;font-size: 22px">Registration</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <script type="text/javascript">
+
+                              function ShowPopUp() {
+
+                               window.open('/Home/Index/', "wndPopUp", 'width=720,height=400,left=100,top=100,resizable=no');
+
+                                                   }
+
+                                </script>
+
+
+                                <img id="Userpic" src="@ViewBag.pic" style="width: 320px; height: 240px;" @*src="../../WebImages/person.jpg"*@ />
+                                <br />
+                            </div>
+                            <input type="button" id="btnSave" value="Take Photo" onclick="ShowPopUp();" />
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="ID">1.ID:</label>
+                                @*@Html.labelfor(model => model.ID)*@
+                                <div class="col-sm-3">
+                                    @*<input type="text" class="form-control">*@
+                                    @Html.TextBoxFor(model => model.ID, new { @class = "form-control" })
+                                </div>
+                                <label class="control-label col-sm-3" for="RegistrationNumber">2.Registrstion Number:</label>
+                                <div class="col-sm-3">
+                                    @*<input type="text" class="form-control">*@
+                                    @Html.TextBoxFor(model => model.RegistrationNumber, new { @class = "form-control", type = "text" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="FullName">3.FULL NAME:</label>
+                                <div class="col-sm-9">
+                                    @*<input type="text" class="form-control">*@
+                                    @Html.TextBoxFor(model => model.FullName, new { @class = "form-control", type = "text" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="photo">4.PHOTO:</label>
+                                <div class="col-sm-3">
+                                    <input type="file" class="form-control">
+                                </div>
+                                @*<div _ngcontent-c5="" class="col-xs-6 col-sm-12 col-md-12">
+                                    <img _ngcontent-c5="" class="img-responsive img-umr center-block" src="assets/img/doctor.png">
+                                    <!----></div>
+                                    <ul _ngcontent-c5="" class="list-group list-inline text-center">
+                                    <li _ngcontent-c5="" class="list-group-item clearfix" style="padding-bottom:0"><p-fileupload _ngcontent-c5="" accept="image/*" auto="auto" chooselabel=" " maxfilesize="2097152"><!---->
+                                        <div class="ui-fileupload ui-widget ng-star-inserted">
+                                        <div class="ui-fileupload-buttonbar ui-widget-header ui-corner-top"><span class="ui-fileupload-choose ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" icon="fa-plus" pbutton="">
+                                            <input type="file" accept="image/*"><span class="ui-button-icon-left ui-clickable fa fa-fw fa-plus"></span>
+                                            <span class="ui-button-text ui-clickable"> </span></span><!----><!----><p-templateloader></p-templateloader><!---->
+                                            </div><div class="ui-fileupload-content ui-widget-content ui-corner-bottom"><!----><p-messages><!----></p-messages><!----><p-templateloader></p-templateloader></div></div><!----></p-fileupload></li><li _ngcontent-c5="" class="list-group-item clearfix" style="padding-bottom:0">
+                                        <a _ngcontent-c5="" class="btn btn-default btn-umr-default" style="padding:7px 13px;">
+                                        <i _ngcontent-c5="" class="fa fa-camera"></i></a></li><!----></ul>*@
+                                <label class="control-label col-sm-3" for="fingerprint">5.finger-print:</label>
+                                @*@Html.labelfor(model => model.fingerprint)*@
+                                @*<div class="form-group">
+                                        @Html.LabelFor(model => model.Contact)
+                                        @Html.TextBoxFor(model => model.Contact, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Contact, null, new { @class = "text-danger" })
+                                    </div>*@
+                                <div class="col-sm-3">
+                                    @*<input type="file" class="form-control">*@
+                                    @Html.TextBoxFor(model => model.FingerPrint, new { @class = "form-control", type = "file" })
+                                </div>
+                            </div>
+                        </div>
+                        @*<div _ngcontent-c5="" class="col-sm-3 col-md-2" style="padding-right:7.5px;"><div _ngcontent-c5="" class="panel panel-default"><div _ngcontent-c5="" class="panel-heading"><h3 _ngcontent-c5="" class="panel-title">User Photo</h3></div><div _ngcontent-c5="" class="panel-body" style="padding:0"><div _ngcontent-c5="" class="row"><div _ngcontent-c5="" class="col-xs-6 col-sm-12 col-md-12"><img _ngcontent-c5="" class="img-responsive img-umr center-block" src="assets/img/doctor.png"><!----></div><!----><div _ngcontent-c5="" class="col-xs-6 col-sm-12 col-md-12 ng-star-inserted"><ul _ngcontent-c5="" class="list-group list-inline text-center"><li _ngcontent-c5="" class="list-group-item clearfix" style="padding-bottom:0"><p-fileupload _ngcontent-c5="" accept="image/*" auto="auto" chooselabel=" " maxfilesize="2097152"><!----><div class="ui-fileupload ui-widget ng-star-inserted"><div class="ui-fileupload-buttonbar ui-widget-header ui-corner-top"><span class="ui-fileupload-choose ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" icon="fa-plus" pbutton=""><input type="file" accept="image/*"><span class="ui-button-icon-left ui-clickable fa fa-fw fa-plus"></span><span class="ui-button-text ui-clickable"> </span></span><!----><!----><p-templateloader></p-templateloader><!----></div><div class="ui-fileupload-content ui-widget-content ui-corner-bottom"><!----><p-messages><!----></p-messages><!----><p-templateloader></p-templateloader></div></div><!----></p-fileupload></li><li _ngcontent-c5="" class="list-group-item clearfix" style="padding-bottom:0"><a _ngcontent-c5="" class="btn btn-default btn-umr-default" style="padding:7px 13px;"><i _ngcontent-c5="" class="fa fa-camera"></i></a></li><!----></ul></div></div></div></div></div>
+                            </div>*@
+                    </div>
+                </form>
+                <div id="message">
+
+                </div>
+                <div style="float:right;margin: 20px 0">
+                    <a class="btn btn-primary btnPrevious">Previous</a>
+
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Register</button>
+                </div>
+            </div>
+        </div><!--tab-content-->
+    </div><!--container-->
+
+    <script src="~/Scripts/jquery.webcam.js"></script>
+    <script src="~/Scripts/BioMetric.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+          $('.btnNext').click(function(){
+  $('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+  $('.btnPrevious').click(function(){
+  $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+  });
+
+    </script>
+</body>
+</html>

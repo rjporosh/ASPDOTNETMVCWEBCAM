@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Changephoto";
+   // ViewBag.Title = "Changephoto";
 }
 
 <script type="text/javascript">
@@ -17,3 +17,42 @@
 <br />
 <input type="button" id="btnSave" value="Take Photo" onclick="ShowPopUp();" />
 
+<div>
+    <script type="text/javascript">
+
+    function ShowPopUp() {
+
+        window.open('/Photo/Index/', "wndPopUp", 'width=720,height=400,left=100,top=100,resizable=no');
+
+    }
+
+    </script>
+
+
+    <img id="Userpic" src="@ViewBag.pic" />
+    <br />
+    <input type="button" id="btnSave" value="Take Photo" onclick="ShowPopUp();" />
+</div>
+<div>
+    <script type="text/javascript">
+
+    function ShowPopUp() {
+
+        window.open('/Photo/Index/', "wndPopUp", 'width=720,height=400,left=100,top=100,resizable=no');
+
+    }
+
+    </script>
+
+
+    <img id="Userpic" src="@ViewBag.pic" />
+    <br />
+    <input type="button" id="btnSave" value="Take Photo" onclick="ShowPopUp();" />
+</div>
+
+<div style="float: left; margin-left: 20px; border: 4px solid #ccc; padding: 5px">
+    <img id="show" style="width: 320px; height: 240px;" src="@ViewBag.pic" />
+    <br>
+    <br>
+    <input id="btnSave" type="button" onclick="ShowPopUp();" value="Take Photo" />
+</div>

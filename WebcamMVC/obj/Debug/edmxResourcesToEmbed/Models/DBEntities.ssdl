@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiometricRegistrationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="tbl_Registration">
+    <Key>
+      <PropertyRef Name="iid" />
+    </Key>
+    <Property Name="ID" Type="bigint" />
+    <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="Photo" Type="image" />
+    <Property Name="FingerPrint" Type="image" />
+    <Property Name="iid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
+    <Property Name="FingerPrintImagePath" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="BiometricRegistrationModelStoreContainer">
+    <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

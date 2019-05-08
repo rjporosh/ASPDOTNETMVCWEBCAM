@@ -211,6 +211,7 @@ C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\WebcamMVC.dll
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\WebcamMVC.pdb
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\Antlr3.Runtime.dll
+C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\AutoMapper.dll
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\DotNetOpenAuth.AspNet.dll
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\DotNetOpenAuth.Core.dll
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\DotNetOpenAuth.OAuth.Consumer.dll
@@ -236,6 +237,7 @@ C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\WebGrease.dll
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\WebMatrix.Data.dll
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\WebMatrix.WebData.dll
+C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\AutoMapper.xml
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\EntityFramework.xml
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\Newtonsoft.Json.xml
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\System.Net.Http.xml
@@ -258,6 +260,5 @@ C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\DotNetOpenAuth.OAuth.xml
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\DotNetOpenAuth.OpenId.xml
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\obj\Debug\WebcamMVC.csprojResolveAssemblyReference.cache
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\obj\Debug\WebcamMVC.dll
 C:\Users\Prince_Porosh\Downloads\Capturing Photo\webcam mvc\WebcamMVC\WebcamMVC\WebcamMVC\obj\Debug\WebcamMVC.pdb

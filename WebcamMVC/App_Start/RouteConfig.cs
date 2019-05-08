@@ -16,7 +16,7 @@ namespace WebcamMVC
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Photo", action = "Changephoto", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Regstration", id = UrlParameter.Optional }
             );
         }
     }

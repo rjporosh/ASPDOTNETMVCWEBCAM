@@ -2,7 +2,7 @@
     function UploadPic() {
         $.ajax({
             type: 'POST',
-            url: ("@Url.Content("~/Home/Rebind")/"),
+            url: ("@Url.Content("~/Photo/Rebind")/"),
             dataType: 'json',
             success: function (data) {
                 $("#show").attr("src", data);
@@ -20,12 +20,12 @@
         if (src != "") {
             $.ajax({
                 type: 'POST',
-                url: ("@Url.Content("~/Home/Index")/"),
+                url: ("@Url.Content("~/Photo/Index")/"),
                dataType: 'json',
                data: { Imagename: src },
                success: function () { }
            });
-            window.opener.location.href = "http://localhost:55694/Home/Regstration";
+            window.opener.location.href = "http://localhost:55694/Photo/Changephoto";
             self.close();}}
 </script>
 @using (Html.BeginForm())
@@ -45,7 +45,7 @@
                     UploadPic();
                 },
                 onCapture: function () {
-                    webcam.save("@Url.Content("~/Home/Capture")/");
+                    webcam.save("@Url.Content("~/Photo/Capture")/");
              },
                 debug: function () { },
                 onLoad: function () { }
