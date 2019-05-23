@@ -38,7 +38,6 @@ function getbyID(id) {
 //Function for clearing the textboxes
 function clearTextBox() {
     $('#myCustomForm')[0].reset();
-    $('#Userpic').reset();
     $('#btnUpdate').hide();
     $('#btnAdd').show();
 }
@@ -71,7 +70,7 @@ function Add() {
                 clearTextBox();
                 $('#message').addClass('alert alert-success').html("<strong>" + result.message + "</strong>").show(200).delay(2500).hide(200);
 
-                clearTextBox();
+            
 
 
             }
