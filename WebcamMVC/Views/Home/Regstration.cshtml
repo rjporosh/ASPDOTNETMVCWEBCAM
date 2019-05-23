@@ -714,6 +714,7 @@
                                 @*@Html.labelfor(model => model.ID)*@
                                 <div class="col-sm-3">
                                     @*<input type="text" class="form-control">*@
+                                    @Html.HiddenFor(model => model.iid, new { @class = "form-control" })
                                     @Html.TextBoxFor(model => model.ID, new { @class = "form-control" })
                                 </div>
                                 <label class="control-label col-sm-3" for="RegistrationNumber">2.Registrstion Number:</label>
@@ -778,7 +779,7 @@
 
     <script src="~/Scripts/jquery.webcam.js"></script>
     <script src="~/Scripts/BioMetric.js"></script>
-    <script src="js/script.js"></script>
+    @*<script src="js/script.js"></script>*@
     <script>
           $('.btnNext').click(function(){
   $('.nav-tabs > .active').next('li').find('a').trigger('click');

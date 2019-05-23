@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ee1e98b1a52a4892b59af5393fe84a9b" Name="Diagram1">
+      <Diagram DiagramId="cae52f6a24654e069a05ee16fab20c85" Name="Diagram1">
         <EntityTypeShape EntityType="BiometricRegistrationModel.tbl_Registration" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

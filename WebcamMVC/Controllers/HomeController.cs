@@ -60,10 +60,10 @@ namespace WebcamMVC.Controllers
 
 
 
-        public JsonResult Rebind()
+        public JsonResult Rebind(BioMetricVM vmObj)
         {
             string path = "http://localhost:55694/WebImages/" + Session["val"].ToString();
-
+            vmObj.Photo = path;
             return Json(path, JsonRequestBehavior.AllowGet);
         }
 
@@ -150,11 +150,7 @@ namespace WebcamMVC.Controllers
 
 
         }
-        //public ActionResult Regstration()
-        //{
-        //    return View();
-        //}
-
+       
         
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +7,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using WebcamMVC.Models;
+using WebcamMVC.Models.ViewModel;
 
 namespace WebcamMVC
 {
@@ -23,6 +26,14 @@ namespace WebcamMVC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            Mapper.Initialize(configaration =>
+            {
+
+                configaration.CreateMap<tbl_Registration, BioMetricVM>();
+                configaration.CreateMap<BioMetricVM, tbl_Registration>();
+            });
+
         }
     }
 }

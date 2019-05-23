@@ -12,11 +12,11 @@
           <Property Name="ID" Type="bigint" />
           <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" />
           <Property Name="FullName" Type="varchar" MaxLength="50" />
-          <Property Name="Photo" Type="image" />
-          <Property Name="FingerPrint" Type="image" />
+          <Property Name="Userpic" Type="varchar(max)" />
+          <Property Name="FingerPrint" Type="varchar(max)" />
           <Property Name="iid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ImagePath" Type="nvarchar" MaxLength="200" />
-          <Property Name="FingerPrintImagePath" Type="nvarchar" MaxLength="200" />
+          <Property Name="ImagePath" Type="nvarchar(max)" />
+          <Property Name="FingerPrintImagePath" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="BiometricRegistrationModelStoreContainer">
           <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" Schema="dbo" store:Type="Tables" />
@@ -33,13 +33,13 @@
           <Property Name="ID" Type="Int64" />
           <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="FingerPrint" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Userpic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FingerPrint" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="iid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="FingerPrintImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FingerPrintImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" />
         </EntityContainer>
       </Schema>
@@ -47,14 +47,14 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BiometricRegistrationModelStoreContainer" CdmEntityContainer="DBEntities">
+        <EntityContainerMapping StorageEntityContainer="BiometricRegistrationModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="tbl_Registration">
             <EntityTypeMapping TypeName="BiometricRegistrationModel.tbl_Registration">
               <MappingFragment StoreEntitySet="tbl_Registration">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
-                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Userpic" ColumnName="Userpic" />
                 <ScalarProperty Name="FingerPrint" ColumnName="FingerPrint" />
                 <ScalarProperty Name="iid" ColumnName="iid" />
                 <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
