@@ -82,7 +82,9 @@ namespace WebcamMVC.Controllers
                 string date = nm.ToString("yyyymmddMMss");
 
                 var path = Server.MapPath("~/WebImages/" + date + "test.jpg");
-                
+
+                TempData["myimagepath"] = date;
+
                 System.IO.File.WriteAllBytes(path, String_To_Bytes2(dump));
 
                 ViewData["path"] = date + "test.jpg";
@@ -110,9 +112,6 @@ namespace WebcamMVC.Controllers
 
         public JsonResult Create([Bind] BioMetricVM vmObj)
         {
-
-
-
             
             int isSaved = 0;
 
@@ -122,6 +121,9 @@ namespace WebcamMVC.Controllers
 
                 var result = Mapper.Map<tbl_Registration>(vmObj);
 
+                string date = TempData["myimagepath"].ToString();
+                result.Userpic = "http://localhost:55694" + "/WebImages/" + date + "test.jpg";
+                TempData.Remove("myimagepath");
                 var stream = Request.InputStream;
                 string dump;
 
@@ -130,17 +132,7 @@ namespace WebcamMVC.Controllers
                     dump = reader.ReadToEnd();
 
                     DateTime nm = DateTime.Now;
-
-                    string date = nm.ToString("yyyymmddMMss");
-
-                    var path = Server.MapPath("~/WebImages/" + date + "test.jpg");
-                   
-                    System.IO.File.WriteAllBytes(path, String_To_Bytes2(dump));
-
-                    ViewData["path"] = date + "test.jpg";
-
-                    Session["val"] = date + "test.jpg";
-                    vmObj.Userpic = path;
+                    
                 }
 
 
