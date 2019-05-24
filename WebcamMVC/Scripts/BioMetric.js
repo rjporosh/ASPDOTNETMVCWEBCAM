@@ -20,6 +20,32 @@ function clearTextBox() {
 }
 
 
+//Function Login
+function Login() {
+   
+    $.ajax({
+        url: "/Home/Login",
+        data: JSON.stringify(obj),
+        type: "POST",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            if (result.status) {
+                clearTextBox();
+                $('#message').addClass('alert alert-success').html("<strong>" + result.message + "</strong>").show(200).delay(2500).hide(200);
+
+
+
+
+            }
+
+
+        },
+        error: function (errormessage) {
+            alert(errormessage.responseText);
+        }
+    });
+}
 
 //Add Data Function   
 function Add() {
@@ -31,7 +57,9 @@ function Add() {
 
         "ID": $('#ID').val(),
         "RegistrationNumber": $('#RegistrationNumber').val(),
-        "Userpic": $('#ViewBag.pic').val(),
+        //"Userpic": $('#ViewBag.pic').val(),
+        "SerialNumber": $('#SerialNumber').val(),
+        //"TemplateBase64": $('#TemplateBase64').val(),
         "FullName": $('#FullName').val(),
         "ImagePath": $('#ImagePath').val(),
         "FingerPrint": $('#FingerPrint').val()

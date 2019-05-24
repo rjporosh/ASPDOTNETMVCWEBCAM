@@ -736,30 +736,50 @@
                                 <div class="col-sm-3">
                                     @Html.TextBoxFor(model => model.ImagePath, new { @class = "form-control", type = "file" })
                                 </div>
-                                @*<div _ngcontent-c5="" class="col-xs-6 col-sm-12 col-md-12">
-                                    <img _ngcontent-c5="" class="img-responsive img-umr center-block" src="assets/img/doctor.png">
-                                    <!----></div>
-                                    <ul _ngcontent-c5="" class="list-group list-inline text-center">
-                                    <li _ngcontent-c5="" class="list-group-item clearfix" style="padding-bottom:0"><p-fileupload _ngcontent-c5="" accept="image/*" auto="auto" chooselabel=" " maxfilesize="2097152"><!---->
-                                        <div class="ui-fileupload ui-widget ng-star-inserted">
-                                        <div class="ui-fileupload-buttonbar ui-widget-header ui-corner-top"><span class="ui-fileupload-choose ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" icon="fa-plus" pbutton="">
-                                            <input type="file" accept="image/*"><span class="ui-button-icon-left ui-clickable fa fa-fw fa-plus"></span>
-                                            <span class="ui-button-text ui-clickable"> </span></span><!----><!----><p-templateloader></p-templateloader><!---->
-                                            </div><div class="ui-fileupload-content ui-widget-content ui-corner-bottom"><!----><p-messages><!----></p-messages><!----><p-templateloader></p-templateloader></div></div><!----></p-fileupload></li><li _ngcontent-c5="" class="list-group-item clearfix" style="padding-bottom:0">
-                                        <a _ngcontent-c5="" class="btn btn-default btn-umr-default" style="padding:7px 13px;">
-                                        <i _ngcontent-c5="" class="fa fa-camera"></i></a></li><!----></ul>*@
-                                <label class="control-label col-sm-3" for="fingerprint">5.finger-print:</label>
-                                @*@Html.labelfor(model => model.fingerprint)*@
-                                @*<div class="form-group">
-                                        @Html.LabelFor(model => model.Contact)
-                                        @Html.TextBoxFor(model => model.Contact, new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(m => m.Contact, null, new { @class = "text-danger" })
-                                    </div>*@
-                                <div class="col-sm-3">
-                                    @*<input type="file" class="form-control">*@
-                                    @Html.TextBoxFor(model => model.FingerPrint, new { @class = "form-control", type = "file" })
+                              
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.ImageHeight)
+                                    @Html.TextBoxFor(model => model.ImageHeight, new { @class = "form-control", type = "textarea" })
+                                </div>
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.ImageWidth)
+                                    @Html.TextBoxFor(model => model.ImageWidth, new { @class = "form-control", type = "textarea" })
+                                </div>
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.RegistrationNumber)
+                                    @Html.TextBoxFor(model => model.RegistrationNumber, new { @class = "form-control", type = "textarea" })
+                                </div>
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.WSQImage)
+                                    @Html.TextBoxFor(model => model.WSQImage, new { @class = "form-control", type = "textarea" })
+                                </div>
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.TemplateBase64)
+                                    @Html.TextBoxFor(model => model.TemplateBase64, new { @class = "form-control", type = "textarea" })
+                                </div>
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.SerialNumber)
+                                    @Html.TextBoxFor(model => model.SerialNumber, new { @class = "form-control", type = "textarea" })
                                 </div>
                             </div>
+                            <div class="col-sm-2">
+                                @Html.LabelFor(model => model.ImageDPI)
+                                @Html.TextBoxFor(model => model.ImageDPI, new { @class = "form-control", type = "textarea" })
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.LabelFor(model => model.ImageQuality)
+                                @Html.TextBoxFor(model => model.ImageQuality, new { @class = "form-control", type = "textarea" })
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.LabelFor(model => model.NFIQ)
+                                @Html.TextBoxFor(model => model.NFIQ, new { @class = "form-control", type = "textarea" })
+                            </div>
+                              </div>
+                           
+                            
                             <div>
                                 <table width="1012" border="0" align="center" cellpadding="0" cellspacing="0">
                                     <tr align="center">
@@ -795,6 +815,7 @@
                     <a class="btn btn-primary btnPrevious">Previous</a>
 
                     <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Register</button>
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Login();">Login</button>
                 </div>
             </div>
         </div><!--tab-content-->
@@ -889,6 +910,16 @@ function SuccessFunc(result) {
         */
         if (result != null && result.BMPBase64.length > 0) {
             document.getElementById("FPImage1").src = "data:image/bmp;base64," + result.BMPBase64;
+            document.getElementById("FingerPrintImagePath").src = "data:image/bmp;base64," + result.BMPBase64;
+            document.getElementById("TemplateBase64").value = result.TemplateBase64;
+            document.getElementById("SerialNumber").value = new Number( result.SerialNumber);
+            document.getElementById("ImageHeight").value = result.ImageHeight;
+            document.getElementById("ImageWidth").value = result.ImageWidth;
+            document.getElementById("ImageDPI").value = result.ImageDPI;
+            document.getElementById("NFIQ").value = result.NFIQ;
+            document.getElementById("ImageQuality").value = result.ImageQuality;
+            document.getElementById("WSQImageSize").value = result.WSQImageSize;
+            document.getElementById("WSQImage").value = result.WSQImage;
         }
         var tbl = "<table border=1>";
         tbl += "<tr>";

@@ -12,16 +12,14 @@ namespace WebcamMVC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tbl_Registration
+    public partial class tbl_Biometric
     {
-        public Nullable<int> ID { get; set; }
-        public string RegistrationNumber { get; set; }
-        public string FullName { get; set; }
-        public string ImagePath { get; set; }
-        public string FingerPrint { get; set; }
-        public string Userpic { get; set; }
-        public string FingerPrintImagePath { get; set; }
-        public int iid { get; set; }
+        public tbl_Biometric()
+        {
+            this.tbl_Registration = new HashSet<tbl_Registration>();
+        }
+    
+        public int Id { get; set; }
         public string SerialNumber { get; set; }
         public Nullable<int> ImageHeight { get; set; }
         public Nullable<int> ImageWidth { get; set; }
@@ -31,8 +29,7 @@ namespace WebcamMVC.Models
         public string TemplateBase64 { get; set; }
         public Nullable<int> WSQImageSize { get; set; }
         public string WSQImage { get; set; }
-        public Nullable<int> tbl_RegistrationId { get; set; }
     
-        public virtual tbl_Biometric tbl_Biometric { get; set; }
+        public virtual ICollection<tbl_Registration> tbl_Registration { get; set; }
     }
 }

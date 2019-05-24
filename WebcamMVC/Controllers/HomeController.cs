@@ -43,7 +43,11 @@ namespace WebcamMVC.Controllers
 
             return View();
         }
-
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
         [HttpGet]
         public ActionResult Regstration()
         {

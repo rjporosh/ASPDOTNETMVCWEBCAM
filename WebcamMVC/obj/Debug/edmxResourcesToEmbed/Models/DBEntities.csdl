@@ -1,19 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="BiometricRegistrationModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="tbl_Biometric">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ImageHeight" Type="Int32" />
+    <Property Name="ImageWidth" Type="Int32" />
+    <Property Name="ImageDPI" Type="Int32" />
+    <Property Name="ImageQuality" Type="Int32" />
+    <Property Name="NFIQ" Type="Int32" />
+    <Property Name="TemplateBase64" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="WSQImageSize" Type="Int32" />
+    <Property Name="WSQImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_Registration" Relationship="Self.FK_tbl_Registration_tbl_Biometric" FromRole="tbl_Biometric" ToRole="tbl_Registration" />
+  </EntityType>
   <EntityType Name="tbl_Registration">
     <Key>
       <PropertyRef Name="iid" />
     </Key>
-    <Property Name="ID" Type="Int64" />
+    <Property Name="ID" Type="Int32" />
     <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Userpic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="FingerPrint" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="iid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FingerPrint" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Userpic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="FingerPrintImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="iid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ImageHeight" Type="Int32" />
+    <Property Name="ImageWidth" Type="Int32" />
+    <Property Name="ImageDPI" Type="Int32" />
+    <Property Name="ImageQuality" Type="Int32" />
+    <Property Name="NFIQ" Type="Int32" />
+    <Property Name="TemplateBase64" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="WSQImageSize" Type="Int32" />
+    <Property Name="WSQImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tbl_RegistrationId" Type="Int32" />
+    <NavigationProperty Name="tbl_Biometric" Relationship="Self.FK_tbl_Registration_tbl_Biometric" FromRole="tbl_Registration" ToRole="tbl_Biometric" />
   </EntityType>
+  <Association Name="FK_tbl_Registration_tbl_Biometric">
+    <End Role="tbl_Biometric" Type="Self.tbl_Biometric" Multiplicity="0..1" />
+    <End Role="tbl_Registration" Type="Self.tbl_Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Biometric">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_Registration">
+        <PropertyRef Name="tbl_RegistrationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Biometric" EntityType="Self.tbl_Biometric" />
     <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" />
+    <AssociationSet Name="FK_tbl_Registration_tbl_Biometric" Association="Self.FK_tbl_Registration_tbl_Biometric">
+      <End Role="tbl_Biometric" EntitySet="tbl_Biometric" />
+      <End Role="tbl_Registration" EntitySet="tbl_Registration" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

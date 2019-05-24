@@ -5,42 +5,128 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="BiometricRegistrationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="tbl_Biometric">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="SerialNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ImageHeight" Type="int" />
+          <Property Name="ImageWidth" Type="int" />
+          <Property Name="ImageDPI" Type="int" />
+          <Property Name="ImageQuality" Type="int" />
+          <Property Name="NFIQ" Type="int" />
+          <Property Name="TemplateBase64" Type="varchar(max)" />
+          <Property Name="WSQImageSize" Type="int" />
+          <Property Name="WSQImage" Type="varchar(max)" />
+        </EntityType>
         <EntityType Name="tbl_Registration">
           <Key>
             <PropertyRef Name="iid" />
           </Key>
-          <Property Name="ID" Type="bigint" />
+          <Property Name="ID" Type="int" />
           <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" />
           <Property Name="FullName" Type="varchar" MaxLength="50" />
-          <Property Name="Userpic" Type="varchar(max)" />
-          <Property Name="FingerPrint" Type="varchar(max)" />
-          <Property Name="iid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ImagePath" Type="varchar(max)" />
+          <Property Name="FingerPrint" Type="varchar(max)" />
+          <Property Name="Userpic" Type="varchar(max)" />
           <Property Name="FingerPrintImagePath" Type="varchar(max)" />
+          <Property Name="iid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SerialNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ImageHeight" Type="int" />
+          <Property Name="ImageWidth" Type="int" />
+          <Property Name="ImageDPI" Type="int" />
+          <Property Name="ImageQuality" Type="int" />
+          <Property Name="NFIQ" Type="int" />
+          <Property Name="TemplateBase64" Type="varchar(max)" />
+          <Property Name="WSQImageSize" Type="int" />
+          <Property Name="WSQImage" Type="varchar(max)" />
+          <Property Name="tbl_RegistrationId" Type="int" />
         </EntityType>
+        <Association Name="FK_tbl_Registration_tbl_Biometric">
+          <End Role="tbl_Biometric" Type="Self.tbl_Biometric" Multiplicity="0..1" />
+          <End Role="tbl_Registration" Type="Self.tbl_Registration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Biometric">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Registration">
+              <PropertyRef Name="tbl_RegistrationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="BiometricRegistrationModelStoreContainer">
+          <EntitySet Name="tbl_Biometric" EntityType="Self.tbl_Biometric" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tbl_Registration_tbl_Biometric" Association="Self.FK_tbl_Registration_tbl_Biometric">
+            <End Role="tbl_Biometric" EntitySet="tbl_Biometric" />
+            <End Role="tbl_Registration" EntitySet="tbl_Registration" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BiometricRegistrationModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="tbl_Biometric">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ImageHeight" Type="Int32" />
+          <Property Name="ImageWidth" Type="Int32" />
+          <Property Name="ImageDPI" Type="Int32" />
+          <Property Name="ImageQuality" Type="Int32" />
+          <Property Name="NFIQ" Type="Int32" />
+          <Property Name="TemplateBase64" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="WSQImageSize" Type="Int32" />
+          <Property Name="WSQImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_Registration" Relationship="Self.FK_tbl_Registration_tbl_Biometric" FromRole="tbl_Biometric" ToRole="tbl_Registration" />
+        </EntityType>
         <EntityType Name="tbl_Registration">
           <Key>
             <PropertyRef Name="iid" />
           </Key>
-          <Property Name="ID" Type="Int64" />
+          <Property Name="ID" Type="Int32" />
           <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Userpic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="FingerPrint" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="iid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FingerPrint" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Userpic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="FingerPrintImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="iid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ImageHeight" Type="Int32" />
+          <Property Name="ImageWidth" Type="Int32" />
+          <Property Name="ImageDPI" Type="Int32" />
+          <Property Name="ImageQuality" Type="Int32" />
+          <Property Name="NFIQ" Type="Int32" />
+          <Property Name="TemplateBase64" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="WSQImageSize" Type="Int32" />
+          <Property Name="WSQImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="tbl_RegistrationId" Type="Int32" />
+          <NavigationProperty Name="tbl_Biometric" Relationship="Self.FK_tbl_Registration_tbl_Biometric" FromRole="tbl_Registration" ToRole="tbl_Biometric" />
         </EntityType>
+        <Association Name="FK_tbl_Registration_tbl_Biometric">
+          <End Role="tbl_Biometric" Type="Self.tbl_Biometric" Multiplicity="0..1" />
+          <End Role="tbl_Registration" Type="Self.tbl_Registration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Biometric">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Registration">
+              <PropertyRef Name="tbl_RegistrationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Biometric" EntityType="Self.tbl_Biometric" />
           <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" />
+          <AssociationSet Name="FK_tbl_Registration_tbl_Biometric" Association="Self.FK_tbl_Registration_tbl_Biometric">
+            <End Role="tbl_Biometric" EntitySet="tbl_Biometric" />
+            <End Role="tbl_Registration" EntitySet="tbl_Registration" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -48,17 +134,43 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BiometricRegistrationModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="tbl_Biometric">
+            <EntityTypeMapping TypeName="BiometricRegistrationModel.tbl_Biometric">
+              <MappingFragment StoreEntitySet="tbl_Biometric">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="ImageHeight" ColumnName="ImageHeight" />
+                <ScalarProperty Name="ImageWidth" ColumnName="ImageWidth" />
+                <ScalarProperty Name="ImageDPI" ColumnName="ImageDPI" />
+                <ScalarProperty Name="ImageQuality" ColumnName="ImageQuality" />
+                <ScalarProperty Name="NFIQ" ColumnName="NFIQ" />
+                <ScalarProperty Name="TemplateBase64" ColumnName="TemplateBase64" />
+                <ScalarProperty Name="WSQImageSize" ColumnName="WSQImageSize" />
+                <ScalarProperty Name="WSQImage" ColumnName="WSQImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tbl_Registration">
             <EntityTypeMapping TypeName="BiometricRegistrationModel.tbl_Registration">
               <MappingFragment StoreEntitySet="tbl_Registration">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
-                <ScalarProperty Name="Userpic" ColumnName="Userpic" />
-                <ScalarProperty Name="FingerPrint" ColumnName="FingerPrint" />
-                <ScalarProperty Name="iid" ColumnName="iid" />
                 <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="FingerPrint" ColumnName="FingerPrint" />
+                <ScalarProperty Name="Userpic" ColumnName="Userpic" />
                 <ScalarProperty Name="FingerPrintImagePath" ColumnName="FingerPrintImagePath" />
+                <ScalarProperty Name="iid" ColumnName="iid" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="ImageHeight" ColumnName="ImageHeight" />
+                <ScalarProperty Name="ImageWidth" ColumnName="ImageWidth" />
+                <ScalarProperty Name="ImageDPI" ColumnName="ImageDPI" />
+                <ScalarProperty Name="ImageQuality" ColumnName="ImageQuality" />
+                <ScalarProperty Name="NFIQ" ColumnName="NFIQ" />
+                <ScalarProperty Name="TemplateBase64" ColumnName="TemplateBase64" />
+                <ScalarProperty Name="WSQImageSize" ColumnName="WSQImageSize" />
+                <ScalarProperty Name="WSQImage" ColumnName="WSQImage" />
+                <ScalarProperty Name="tbl_RegistrationId" ColumnName="tbl_RegistrationId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,17 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="BiometricRegistrationModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="tbl_Biometric">
+      <EntityTypeMapping TypeName="BiometricRegistrationModel.tbl_Biometric">
+        <MappingFragment StoreEntitySet="tbl_Biometric">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="ImageHeight" ColumnName="ImageHeight" />
+          <ScalarProperty Name="ImageWidth" ColumnName="ImageWidth" />
+          <ScalarProperty Name="ImageDPI" ColumnName="ImageDPI" />
+          <ScalarProperty Name="ImageQuality" ColumnName="ImageQuality" />
+          <ScalarProperty Name="NFIQ" ColumnName="NFIQ" />
+          <ScalarProperty Name="TemplateBase64" ColumnName="TemplateBase64" />
+          <ScalarProperty Name="WSQImageSize" ColumnName="WSQImageSize" />
+          <ScalarProperty Name="WSQImage" ColumnName="WSQImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tbl_Registration">
       <EntityTypeMapping TypeName="BiometricRegistrationModel.tbl_Registration">
         <MappingFragment StoreEntitySet="tbl_Registration">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
           <ScalarProperty Name="FullName" ColumnName="FullName" />
-          <ScalarProperty Name="Userpic" ColumnName="Userpic" />
-          <ScalarProperty Name="FingerPrint" ColumnName="FingerPrint" />
-          <ScalarProperty Name="iid" ColumnName="iid" />
           <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="FingerPrint" ColumnName="FingerPrint" />
+          <ScalarProperty Name="Userpic" ColumnName="Userpic" />
           <ScalarProperty Name="FingerPrintImagePath" ColumnName="FingerPrintImagePath" />
+          <ScalarProperty Name="iid" ColumnName="iid" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="ImageHeight" ColumnName="ImageHeight" />
+          <ScalarProperty Name="ImageWidth" ColumnName="ImageWidth" />
+          <ScalarProperty Name="ImageDPI" ColumnName="ImageDPI" />
+          <ScalarProperty Name="ImageQuality" ColumnName="ImageQuality" />
+          <ScalarProperty Name="NFIQ" ColumnName="NFIQ" />
+          <ScalarProperty Name="TemplateBase64" ColumnName="TemplateBase64" />
+          <ScalarProperty Name="WSQImageSize" ColumnName="WSQImageSize" />
+          <ScalarProperty Name="WSQImage" ColumnName="WSQImage" />
+          <ScalarProperty Name="tbl_RegistrationId" ColumnName="tbl_RegistrationId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

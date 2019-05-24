@@ -25,6 +25,7 @@ namespace WebcamMVC.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<tbl_Biometric> tbl_Biometric { get; set; }
         public DbSet<tbl_Registration> tbl_Registration { get; set; }
     }
 }
