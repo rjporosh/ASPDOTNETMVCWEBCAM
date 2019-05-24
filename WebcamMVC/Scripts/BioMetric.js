@@ -5,35 +5,12 @@
 
 });
 
-
-function getbyID(id) {
-    $('#Name').css('border-color', 'lightgrey');
-
-    $('#Code').css('border-color', 'lightgrey');
-    $('#Description').css('border-color', 'lightgrey');
-    $.ajax({
-        url: "/Home/GetbyID/" + id,
-        type: "GET",
-        contentType: "application/json;charset=UTF-8",
-        dataType: "json",
-        success: function (result) {
-            $('#ID').val(result.ID);
-            $('#RegistrationNumber').val(result.RegistrationNumber);
-
-            $('#FullName').val(result.FullName);
-            $('#Photo').val(result.Photo);
-            $('#FingerPrint').val(result.FingerPrint);
-
-            $('#myModal').modal('show');
-            $('#btnUpdate').show();
-            $('#btnAdd').hide();
-        },
-        error: function (errormessage) {
-            alert(errormessage.responseText);
-        }
-    });
-    return false;
-}
+var fingerpos = ["LEFT_THUMB", "LEFT_INDEX", "LEFT_MIDDLE", "LEFT_RING", "LEFT_LITTLE",
+				"RIGHT_THUMB", "RIGHT_INDEX", "RIGHT_MIDDLE", "RIGHT_RING", "RIGHT_LITTLE"];
+var service_handle = "";
+var ENROLL_OBJ;
+var cdate = new Date();
+var TotalEnrollments = 0;
 
 //Function for clearing the textboxes
 function clearTextBox() {
@@ -54,9 +31,9 @@ function Add() {
 
         "ID": $('#ID').val(),
         "RegistrationNumber": $('#RegistrationNumber').val(),
-        "Userpic":$('#Userpic').val(),
+        "Userpic": $('#ViewBag.pic').val(),
         "FullName": $('#FullName').val(),
-        "Photo": $('#Photo').val(),
+        "ImagePath": $('#ImagePath').val(),
         "FingerPrint": $('#FingerPrint').val()
     };
     $.ajax({
@@ -84,7 +61,15 @@ function Add() {
 }
 
 
-
+function captureFP(arridx) {
+    var imgid = fingerpos[arridx];
+    if (ENROLL_OBJ && ENROLL_OBJ.length > arridx && ENROLL_OBJ.EnrollData[arridx].na >= 3) {
+        alert("Maximum Attempts Over!");
+        return;
+    }
+    document.getElementById(imgid).src = ".\Images\wait.gif";
+    CallSGIFPGetData(arridx, SuccessFunc, ErrorFunc);
+}
 
 
 //Valdidation using jquery  

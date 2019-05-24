@@ -60,10 +60,10 @@ namespace WebcamMVC.Controllers
 
 
 
-        public JsonResult Rebind(BioMetricVM vmObj)
+        public JsonResult Rebind()
         {
             string path = "http://localhost:55694/WebImages/" + Session["val"].ToString();
-            vmObj.Photo = path;
+            
             return Json(path, JsonRequestBehavior.AllowGet);
         }
 
@@ -82,7 +82,7 @@ namespace WebcamMVC.Controllers
                 string date = nm.ToString("yyyymmddMMss");
 
                 var path = Server.MapPath("~/WebImages/" + date + "test.jpg");
-
+                
                 System.IO.File.WriteAllBytes(path, String_To_Bytes2(dump));
 
                 ViewData["path"] = date + "test.jpg";
@@ -113,7 +113,7 @@ namespace WebcamMVC.Controllers
 
 
 
-
+            
             int isSaved = 0;
 
             if (ModelState.IsValid)
@@ -122,6 +122,26 @@ namespace WebcamMVC.Controllers
 
                 var result = Mapper.Map<tbl_Registration>(vmObj);
 
+                var stream = Request.InputStream;
+                string dump;
+
+                using (var reader = new StreamReader(stream))
+                {
+                    dump = reader.ReadToEnd();
+
+                    DateTime nm = DateTime.Now;
+
+                    string date = nm.ToString("yyyymmddMMss");
+
+                    var path = Server.MapPath("~/WebImages/" + date + "test.jpg");
+                   
+                    System.IO.File.WriteAllBytes(path, String_To_Bytes2(dump));
+
+                    ViewData["path"] = date + "test.jpg";
+
+                    Session["val"] = date + "test.jpg";
+                    vmObj.Userpic = path;
+                }
 
 
                 isSaved = _Manager.Add(result);
@@ -141,8 +161,23 @@ namespace WebcamMVC.Controllers
 
             else
             {
-                status = false;
-                message = "Data Allready Exsists !!!";
+                //status = false;
+                //message = "Data Allready Exsists !!!";
+                var result = Mapper.Map<tbl_Registration>(vmObj);
+
+
+
+                isSaved = _Manager.Add(result);
+                if (isSaved > 0)
+                {
+                    status = true;
+                    message = "Succesfully Registered";
+                }
+                else
+                {
+                    status = true;
+                    message = "Error! Please try again.";
+                }
                 return new JsonResult { Data = new { status = status, message = message } };
             }
 

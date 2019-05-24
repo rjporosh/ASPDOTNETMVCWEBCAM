@@ -173,7 +173,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PhotoController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -287,12 +286,6 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Views\Photo\Changephoto.cshtml">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="Views\Photo\Index.cshtml">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -336,9 +329,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\TakePhoto.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\porosh\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Regstration.cshtml" />

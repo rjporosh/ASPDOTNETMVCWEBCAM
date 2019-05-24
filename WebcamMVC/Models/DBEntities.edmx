@@ -15,8 +15,8 @@
           <Property Name="Userpic" Type="varchar(max)" />
           <Property Name="FingerPrint" Type="varchar(max)" />
           <Property Name="iid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ImagePath" Type="nvarchar(max)" />
-          <Property Name="FingerPrintImagePath" Type="nvarchar(max)" />
+          <Property Name="ImagePath" Type="varchar(max)" />
+          <Property Name="FingerPrintImagePath" Type="varchar(max)" />
         </EntityType>
         <EntityContainer Name="BiometricRegistrationModelStoreContainer">
           <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" Schema="dbo" store:Type="Tables" />
@@ -36,8 +36,8 @@
           <Property Name="Userpic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="FingerPrint" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="iid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FingerPrintImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FingerPrintImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" />

@@ -13,8 +13,8 @@ namespace WebcamMVC.Repository.BaseRepo
 
         int Add(T entity);
         IQueryable<T> ReadAll();
-        int Update(T entity);
-        int Delete(T entity);
+        //int Update(T entity);
+        //int Delete(T entity);
 
 
 

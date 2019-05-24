@@ -732,9 +732,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-3" for="photo">4.PHOTO:</label>
+                                <label class="control-label col-sm-3" for="imagepath">4.PHOTO:</label>
                                 <div class="col-sm-3">
-                                    <input type="file" class="form-control">
+                                    @Html.TextBoxFor(model => model.ImagePath, new { @class = "form-control", type = "file" })
                                 </div>
                                 @*<div _ngcontent-c5="" class="col-xs-6 col-sm-12 col-md-12">
                                     <img _ngcontent-c5="" class="img-responsive img-umr center-block" src="assets/img/doctor.png">
@@ -760,6 +760,15 @@
                                     @Html.TextBoxFor(model => model.FingerPrint, new { @class = "form-control", type = "file" })
                                 </div>
                             </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                <td>
+                                    <img id="LEFT_THUMB" border="1" onclick="captureFP(0)" alt="LEFT_THUMB" height=200 width=150 src=".\images\hands\left_hand_6.png"> <br>
+                                    <Center> <input type="button" value="Scan" id="BTN_LEFT_THUMB" onclick="captureFP(0)"> </Center>
+                                </td>
+                                </table>
+                            </div>
                         </div>
                         @*<div _ngcontent-c5="" class="col-sm-3 col-md-2" style="padding-right:7.5px;"><div _ngcontent-c5="" class="panel panel-default"><div _ngcontent-c5="" class="panel-heading"><h3 _ngcontent-c5="" class="panel-title">User Photo</h3></div><div _ngcontent-c5="" class="panel-body" style="padding:0"><div _ngcontent-c5="" class="row"><div _ngcontent-c5="" class="col-xs-6 col-sm-12 col-md-12"><img _ngcontent-c5="" class="img-responsive img-umr center-block" src="assets/img/doctor.png"><!----></div><!----><div _ngcontent-c5="" class="col-xs-6 col-sm-12 col-md-12 ng-star-inserted"><ul _ngcontent-c5="" class="list-group list-inline text-center"><li _ngcontent-c5="" class="list-group-item clearfix" style="padding-bottom:0"><p-fileupload _ngcontent-c5="" accept="image/*" auto="auto" chooselabel=" " maxfilesize="2097152"><!----><div class="ui-fileupload ui-widget ng-star-inserted"><div class="ui-fileupload-buttonbar ui-widget-header ui-corner-top"><span class="ui-fileupload-choose ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" icon="fa-plus" pbutton=""><input type="file" accept="image/*"><span class="ui-button-icon-left ui-clickable fa fa-fw fa-plus"></span><span class="ui-button-text ui-clickable"> </span></span><!----><!----><p-templateloader></p-templateloader><!----></div><div class="ui-fileupload-content ui-widget-content ui-corner-bottom"><!----><p-messages><!----></p-messages><!----><p-templateloader></p-templateloader></div></div><!----></p-fileupload></li><li _ngcontent-c5="" class="list-group-item clearfix" style="padding-bottom:0"><a _ngcontent-c5="" class="btn btn-default btn-umr-default" style="padding:7px 13px;"><i _ngcontent-c5="" class="fa fa-camera"></i></a></li><!----></ul></div></div></div></div></div>
                             </div>*@
@@ -779,7 +788,7 @@
 
     <script src="~/Scripts/jquery.webcam.js"></script>
     <script src="~/Scripts/BioMetric.js"></script>
-    @*<script src="js/script.js"></script>*@
+    <script src="js/script.js"></script>
     <script>
           $('.btnNext').click(function(){
   $('.nav-tabs > .active').next('li').find('a').trigger('click');
