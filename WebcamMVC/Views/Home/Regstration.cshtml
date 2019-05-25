@@ -757,6 +757,10 @@
                                     @Html.TextBoxFor(model => model.WSQImage, new { @class = "form-control", type = "textarea" })
                                 </div>
                                 <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.WSQImageSize)
+                                    @Html.TextBoxFor(model => model.WSQImageSize, new { @class = "form-control", type = "textarea" })
+                                </div>
+                                <div class="col-sm-2">
                                     @Html.LabelFor(model => model.TemplateBase64)
                                     @Html.TextBoxFor(model => model.TemplateBase64, new { @class = "form-control", type = "textarea" })
                                 </div>
@@ -912,7 +916,7 @@ function SuccessFunc(result) {
             document.getElementById("FPImage1").src = "data:image/bmp;base64," + result.BMPBase64;
             document.getElementById("FingerPrintImagePath").src = "data:image/bmp;base64," + result.BMPBase64;
             document.getElementById("TemplateBase64").value = result.TemplateBase64;
-            document.getElementById("SerialNumber").value = new Number( result.SerialNumber);
+            document.getElementById("SerialNumber").value =  result.SerialNumber;
             document.getElementById("ImageHeight").value = result.ImageHeight;
             document.getElementById("ImageWidth").value = result.ImageWidth;
             document.getElementById("ImageDPI").value = result.ImageDPI;
