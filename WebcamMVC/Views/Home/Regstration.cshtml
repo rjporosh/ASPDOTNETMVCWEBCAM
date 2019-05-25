@@ -14,6 +14,7 @@
 <body>
     <div class="container">
         <h2>NSA Form</h2>
+
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#home">Course and Eligibility</a></li>
             <li><a data-toggle="tab" href="#menu1">Student Details</a></li>
@@ -23,8 +24,9 @@
         </ul>
 
         <div class="tab-content">
+           
             <div id="home" class="tab-pane fade in active">
-
+                
                 <form class="form-inline" style="padding: 30px 0;">
                     <div class="form-group" style="margin-bottom: 15px">
                         <label for="email">APPLICATION FORM No:</label>
@@ -843,67 +845,14 @@
     </script>
 
 
-    <script type="text/javascript">
-    // nice global area, so that only 1 location, contains this information
-    // var secugen_lic = "hE/78I5oOUJnm5fa5zDDRrEJb5tdqU71AVe+/Jc2RK0=";   // webapi.secugen.com
-    var secugen_lic = "";
-
-    function ErrorCodeToString(ErrorCode) {
-        var Description;
-        switch (ErrorCode) {
-            // 0 - 999 - Comes from SgFplib.h
-            // 1,000 - 9,999 - SGIBioSrv errors
-            // 10,000 - 99,999 license errors
-            case 51:
-                Description = "System file load failure";
-                break;
-            case 52:
-                Description = "Sensor chip initialization failed";
-                break;
-            case 53:
-                Description = "Device not found";
-                break;
-            case 54:
-                Description = "Fingerprint image capture timeout";
-                break;
-            case 55:
-                Description = "No device available";
-                break;
-            case 56:
-                Description = "Driver load failed";
-                break;
-            case 57:
-                Description = "Wrong Image";
-                break;
-            case 58:
-                Description = "Lack of bandwidth";
-                break;
-            case 59:
-                Description = "Device Busy";
-                break;
-            case 60:
-                Description = "Cannot get serial number of the device";
-                break;
-            case 61:
-                Description = "Unsupported device";
-                break;
-            case 63:
-                Description = "SgiBioSrv didn't start; Try image capture again";
-                break;
-            default:
-                Description = "Unknown error code or Update code to reflect latest result";
-                break;
-        }
-        return Description;
-    }
-
-    </script>
+ 
 
 
 
     <script type="text/javascript">
 
-    function captureFP() {
+        function captureFP() {
+        
     CallSGIFPGetData(SuccessFunc, ErrorFunc);
 }
 
@@ -915,18 +864,18 @@ function SuccessFunc(result) {
         /* 	Display BMP data in image tag
             BMP data is in base 64 format
         */
-        if (result != null && result.BMPBase64.length > 0) {
+        if (result != null && result.BMPBase64.length > 0 && result.TemplateBase64.length > 0) {
             document.getElementById("FPImage1").src = "data:image/bmp;base64," + result.BMPBase64;
-            document.getElementById("FingerPrintImagePath").src = "data:image/bmp;base64," + result.BMPBase64;
+            //document.getElementById("FingerPrintImagePath").src = "data:image/bmp;base64," + result.BMPBase64;
             document.getElementById("TemplateBase64").value = result.TemplateBase64;
-            document.getElementById("SerialNumber").value =  result.SerialNumber;
-            document.getElementById("ImageHeight").value = result.ImageHeight;
-            document.getElementById("ImageWidth").value = result.ImageWidth;
-            document.getElementById("ImageDPI").value = result.ImageDPI;
-            document.getElementById("NFIQ").value = result.NFIQ;
-            document.getElementById("ImageQuality").value = result.ImageQuality;
-            document.getElementById("WSQImageSize").value = result.WSQImageSize;
-            document.getElementById("WSQImage").value = result.WSQImage;
+            //document.getElementById("SerialNumber").value =  result.SerialNumber;
+            //document.getElementById("ImageHeight").value = result.ImageHeight;
+            //document.getElementById("ImageWidth").value = result.ImageWidth;
+            //document.getElementById("ImageDPI").value = result.ImageDPI;
+            //document.getElementById("NFIQ").value = result.NFIQ;
+            //document.getElementById("ImageQuality").value = result.ImageQuality;
+            //document.getElementById("WSQImageSize").value = result.WSQImageSize;
+            //document.getElementById("WSQImage").value = result.WSQImage;
         }
         var tbl = "<table border=1>";
         tbl += "<tr>";
