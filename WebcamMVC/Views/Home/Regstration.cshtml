@@ -763,24 +763,27 @@
                                 <div class="col-sm-2">
                                     @Html.LabelFor(model => model.TemplateBase64)
                                     @Html.TextBoxFor(model => model.TemplateBase64, new { @class = "form-control", type = "textarea" })
-                                </div>
+                                </div>  
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-2">
                                     @Html.LabelFor(model => model.SerialNumber)
                                     @Html.TextBoxFor(model => model.SerialNumber, new { @class = "form-control", type = "textarea" })
                                 </div>
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.ImageDPI)
+                                    @Html.TextBoxFor(model => model.ImageDPI, new { @class = "form-control", type = "textarea" })
+                                </div>
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.ImageQuality)
+                                    @Html.TextBoxFor(model => model.ImageQuality, new { @class = "form-control", type = "textarea" })
+                                </div>
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(model => model.NFIQ)
+                                    @Html.TextBoxFor(model => model.NFIQ, new { @class = "form-control", type = "textarea" })
+                                </div>
                             </div>
-                            <div class="col-sm-2">
-                                @Html.LabelFor(model => model.ImageDPI)
-                                @Html.TextBoxFor(model => model.ImageDPI, new { @class = "form-control", type = "textarea" })
-                            </div>
-                            <div class="col-sm-2">
-                                @Html.LabelFor(model => model.ImageQuality)
-                                @Html.TextBoxFor(model => model.ImageQuality, new { @class = "form-control", type = "textarea" })
-                            </div>
-                            <div class="col-sm-2">
-                                @Html.LabelFor(model => model.NFIQ)
-                                @Html.TextBoxFor(model => model.NFIQ, new { @class = "form-control", type = "textarea" })
-                            </div>
+                            
                               </div>
                            
                             
