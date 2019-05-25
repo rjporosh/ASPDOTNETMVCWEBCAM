@@ -43,7 +43,15 @@ namespace WebcamMVC.Controllers
 
             return View();
         }
-        
+        [HttpGet]
+        public JsonResult GetAllUser()
+        {
+            var var = _Manager.Read().ToList();
+
+            var MDirectorList = Mapper.Map<List<BioMetricVM>>(var);
+
+            return new JsonResult { Data = MDirectorList, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
         [HttpGet]
         public ActionResult Login()
         {
