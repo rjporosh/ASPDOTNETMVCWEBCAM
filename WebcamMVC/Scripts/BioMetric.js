@@ -79,6 +79,7 @@ function ErrorFunc(status) {
         service. Redirect the user to a page where he can download the
         executable and install it.
     */
+   // template_1 = "hyfjsuyhfgvksudyfgvcksudyfgvksudfbvukybjhgvkuyg";
     alert("Check if SGIBIOSRV is running; status = " + status + ":");
 }
 
@@ -107,7 +108,7 @@ function CallSGIFPGetData(successCall, failCall) {
 
 function matchScore(succFunction, failFunction) {
     if (template_1 == "" || template_2 == "") {
-        alert("Please scan two fingers to verify!!");
+        alert("Please scan your fingers to login!!");
         return;
     }
     var uri = "https://localhost:8443/SGIMatchScore";
@@ -139,12 +140,13 @@ function succMatch(result) {
     if (result.ErrorCode == 0) {
         if (result.MatchingScore >= idQuality)
         {
-            alert("MATCHED ! (" + result.MatchingScore + ")");
+            alert("MATCHED ! Login Success (" + result.MatchingScore + ")");
             document.getElementById("Userpic").src = singleData.Userpic;
+            document.getElementById("FullName").src = singleData.FullName;
         }
 
         else
-            alert("NOT MATCHED ! (" + result.MatchingScore + ")");
+            alert("NOT MATCHED ! No User Exist (" + result.MatchingScore + ")");
     }
     else {
         alert("Error Scanning Fingerprint ErrorCode = " + result.ErrorCode);
