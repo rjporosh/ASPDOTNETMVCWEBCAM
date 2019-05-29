@@ -42,7 +42,7 @@ function MatchWithAllData() {
 
 };
 
-function SuccessFunc1(result) {
+function SuccessFunc1(result) { 
     if (result.ErrorCode == 0) {
         /* 	Display BMP data in image tag
             BMP data is in base 64 format
