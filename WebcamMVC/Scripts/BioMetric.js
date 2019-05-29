@@ -22,7 +22,7 @@ function MatchWithAllData() {
 
             // get json data list
             $.each(data, function (key, obj) {
-                debugger;
+               // debugger;
                  template_2 = obj.TemplateBase64;
                  singleData = obj;
 
@@ -55,21 +55,21 @@ function SuccessFunc1(result) {
     else {
         alert("Fingerprint Capture Error Code:  " + result.ErrorCode + ".\nDescription:  " + ErrorCodeToString(result.ErrorCode) + ".");
     }
-     template_1 = obj.TemplateBase64;
+   //  template_1 = obj.TemplateBase64;
 }
 
-//function SuccessFunc2(result) {
-//    if (result.ErrorCode == 0) {
-//        /* 	Display BMP data in image tag
-//            BMP data is in base 64 format
+//function successfunc2(result) {
+//    if (result.errorcode == 0) {
+//        /* 	display bmp data in image tag
+//            bmp data is in base 64 format
 //        */
-//        if (result != null && result.BMPBase64.length > 0) {
-//            document.getElementById('FPImage2').src = "data:image/bmp;base64," + result.BMPBase64;
+//        if (result != null && result.bmpbase64.length > 0) {
+//            document.getelementbyid('fpimage2').src = "data:image/bmp;base64," + result.bmpbase64;
 //        }
-//        template_2 = result.TemplateBase64;
+//        template_2 = result.templatebase64;
 //    }
 //    else {
-//        alert("Fingerprint Capture Error Code:  " + result.ErrorCode + ".\nDescription:  " + ErrorCodeToString(result.ErrorCode) + ".");
+//        alert("fingerprint capture error code:  " + result.errorcode + ".\ndescription:  " + errorcodetostring(result.errorcode) + ".");
 //    }
 //}
 
@@ -107,7 +107,7 @@ function CallSGIFPGetData(successCall, failCall) {
 }
 
 function matchScore(succFunction, failFunction) {
-    if (template_1 == "" || template_2 == "") {
+    if (template_1 == null || template_2 == null) {
         alert("Please scan your fingers to login!!");
         return;
     }

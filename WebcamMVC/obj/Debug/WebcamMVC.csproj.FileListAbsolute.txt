@@ -373,3 +373,4 @@ C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\Client\ASPDOTNETMVC
 C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\Client\ASPDOTNETMVCWEBCAM\WebcamMVC\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
 C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\Client\ASPDOTNETMVCWEBCAM\WebcamMVC\obj\Debug\WebcamMVC.dll
 C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\Client\ASPDOTNETMVCWEBCAM\WebcamMVC\obj\Debug\WebcamMVC.pdb
+C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\Client\ASPDOTNETMVCWEBCAM\WebcamMVC\obj\Debug\WebcamMVC.csprojResolveAssemblyReference.cache
