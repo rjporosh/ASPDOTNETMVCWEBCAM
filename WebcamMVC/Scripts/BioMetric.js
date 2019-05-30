@@ -107,7 +107,7 @@ function CallSGIFPGetData(successCall, failCall) {
 }
 
 function matchScore(succFunction, failFunction) {
-    if (template_1 == null || template_2 == null) {
+    if (template_1 == null || template_2 == null || template_1 == "") {
         alert("Please scan your fingers to login!!");
         return;
     }
